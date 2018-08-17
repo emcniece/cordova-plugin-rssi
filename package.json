@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-rssi",
+  "version": "0.0.1",
+  "description": "Cordova plugin for reading WiFi RSSI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emcniece/cordova-plugin-rssi.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova",
+    "plugin",
+    "rssi"
+  ],
+  "engines": {
+    "cordovaDependencies": {
+      "0.0.1": { "cordova-ios": ">4.3.0"}
+    }
+  },
+  "author": {
+    "name": "Eric McNiece",
+    "url": "https://github.com/emcniece"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emcniece/cordova-plugin-rssi/issues"
+  },
+  "homepage": "https://github.com/emcniece/cordova-plugin-rssi#readme"
+}
