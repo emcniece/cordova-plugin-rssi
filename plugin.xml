@@ -36,6 +36,7 @@
         </config-file>
         <header-file src="src/ios/RSSI-Bridging-Header.h"/>
         <source-file src="src/ios/RSSI.swift"/>
+        <header-file src="src/ios/OCCatch.h"/>
     </platform>
 
     <dependency id="cordova-plugin-add-swift-support" version="1.7.2"/>
