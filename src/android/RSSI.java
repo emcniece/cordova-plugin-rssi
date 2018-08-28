@@ -27,9 +27,6 @@ package net.emcniece.cordova;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 import android.net.wifi.WifiInfo;
-import android.os.Build;
-import android.provider.Settings;
-import android.text.TextUtils;
 import android.util.Log;
 
 import org.apache.cordova.CallbackContext;
@@ -61,7 +58,6 @@ public class RSSI extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) {
-
         if (ACTION_READ.equals(action)) {
             Log.d(TAG, "read");
             final CordovaInterface cd = this.cordova;
@@ -82,6 +78,7 @@ public class RSSI extends CordovaPlugin {
 
                         status.put("rssi", rssi);
                         status.put("bars", level);
+                        status.put("isIPhoneX", false);
 
                         Log.d(TAG, "Sending result: " + status.toString());
 
