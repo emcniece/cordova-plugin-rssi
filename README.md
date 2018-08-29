@@ -22,6 +22,7 @@ const rssi = cordova.plugins.rssi;
 
 
 #### `rssi.read(success, failure)`
+
 Returns the device's current WiFi RSSI information via 3 parameters:
 
 ```js
@@ -31,11 +32,11 @@ rssi.read(function success(data){
 });
 ```
 
-- `rssi: <number|null>`: WiFi Received Signal Strength Indicator
+- `rssi`: WiFi Received Signal Strength Indicator
   - Availability: Android, iOS but not iPhoneX
   - Value: Integer or `null` if unavailable
   - Range: `-100 ≤ x ≤ 0`
-- `bars: <number>`: Number of visible bars in WiFi icon
+- `bars`: Number of visible bars in WiFi icon
   - Availability: Android, iOS
   - Value: Integer
   - Range: `0 ≤ x ≤ 4`: <sup>\*Range values only tested for Android</sup>
@@ -44,7 +45,7 @@ rssi.read(function success(data){
     - `2`: RSSI `-67` - `-77`
     - `1`: RSSI `-78` - `-88`
     - `0`: RSSI `-89-`
-- `isIPhoneX: <boolean>`: Flag for detecting whether iPhone X acquisition was used
+- `isIPhoneX`: Flag for detecting whether iPhone X acquisition was used
   - Availability: Android, iOS
   - Value: Boolean
 
@@ -58,6 +59,7 @@ While developing in browser, a mock can be utilized to prevent errors. See an ex
 
 - [Android RSSI-to-bar formula](https://android.stackexchange.com/a/176325)
 - [Android WifiManager class](https://github.com/eldarerathis/android_frameworks_base/blob/eldarerathis-7.1.x/wifi/java/android/net/wifi/WifiManager.java#L633)
+- [iOS iPhone X Detection](https://stackoverflow.com/a/47566231/943540)
 
 ## Licence ##
 
