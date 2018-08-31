@@ -61,6 +61,12 @@ While developing in browser, a mock can be utilized to prevent errors. See an ex
 - [Android WifiManager class](https://github.com/eldarerathis/android_frameworks_base/blob/eldarerathis-7.1.x/wifi/java/android/net/wifi/WifiManager.java#L633)
 - [iOS iPhone X Detection](https://stackoverflow.com/a/47566231/943540)
 
+
+## Attribution
+
+This open-source project was made possible by some fine people over at [CNY Apps](http://cnyapps.com/).
+
+
 ## Licence ##
 
 [The MIT License](./LICENSE)
