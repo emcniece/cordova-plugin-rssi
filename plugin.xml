@@ -2,7 +2,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-rssi"
-    version="0.0.1">
+    version="1.0.0">
 
     <name>RSSI</name>
     <description>RSSI plugin for Cordova</description>
@@ -10,4 +10,34 @@
     <keywords>cordova,plugin,network,wifi,rssi</keywords>
     <license>MIT</license>
 
+    <platform name="android">
+        <js-module src="www/rssi.js" name="RSSI">
+            <clobbers target="cordova.plugins.rssi" />
+        </js-module>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+        </config-file>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="RSSI">
+                <param name="android-package" value="net.emcniece.cordova.RSSI" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/RSSI.java" target-dir="src/net/emcniece/cordova" />
+    </platform>
+
+    <platform name="ios">
+        <js-module src="www/rssi.js" name="RSSI">
+            <clobbers target="cordova.plugins.rssi" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="RSSI">
+                <param name="ios-package" value="RSSI"/>
+            </feature>
+        </config-file>
+        <header-file src="src/ios/RSSI-Bridging-Header.h"/>
+        <source-file src="src/ios/RSSI.swift"/>
+        <header-file src="src/ios/OCCatch.h"/>
+    </platform>
+
+    <dependency id="cordova-plugin-add-swift-support" version="1.7.2"/>
 </plugin>
