@@ -4,6 +4,7 @@ This plugin allows you to read WiFi RSSI from applications developed using Cordo
 
 Works on both Android and iOS platforms, but **will not pass the Apple App Store Review process**.
 
+Tested on iOS Simulator devices: iPhone 5, 6, 7, 8, SE, X, XR, XS, XS Max
 
 ## Installation
 
@@ -70,3 +71,11 @@ This open-source project was made possible by some fine people over at [CNY Apps
 ## Licence ##
 
 [The MIT License](./LICENSE)
+
+## Changelog ##
+
+- v1.1.0
+  - Adding support for iPhone XR, XS, XS Max, iOS 12
+
+- v1.0.0
+  - Init

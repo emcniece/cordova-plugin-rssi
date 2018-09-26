@@ -29,6 +29,14 @@ import Foundation
  * Detects iPhoneX devices.
  * Usage: `if UIDevice.isIphoneX {}`
  * https://stackoverflow.com/a/47566231/943540
+ *
+ * modelIdentifier:
+ *   iPhone SE: 8,4
+ *   iPhone 8: 10,4, 10,5
+ *   iPhone X: 10,3 10,6
+ *   iPhone XR: 11,8
+ *   iPhone XS: 11,2
+ *   iPhone XS Max: 11,4
  */
 extension UIDevice {
     static var isIphoneX: Bool {
@@ -42,8 +50,33 @@ extension UIDevice {
             sysctlbyname("hw.machine", &machine, &size, nil, 0)
             modelIdentifier = String(cString: machine)
         }
+
+        let modelNumber = modelIdentifier.replacingOccurrences(of: "iPhone", with: "")
+        let modelArray = modelNumber.components(separatedBy: ",")
+        let modelMajor:Int! = Int(modelArray[0])
+        let modelMinor:Int! = Int(modelArray[1])
         
-        return modelIdentifier == "iPhone10,3" || modelIdentifier == "iPhone10,6"
+        #if DEBUG
+            print("modelIdentifier: \(modelIdentifier)")
+            print("modelArray: \(modelArray)")
+        #endif
+
+        if modelMajor < 10 {
+            // iPhone 7 and below
+            return false
+        } else if modelMajor == 10 && modelMinor == 3 {
+            // iPhone X, but not iPhone 8
+            return true
+        } else if modelMajor == 10 && modelMinor == 6 {
+            // iPhone X, but not iPhone 8
+            return true
+        } else if modelMajor > 10 {
+            // iPhone XR, XS, XS Max, and above
+            return true
+        } else {
+            // Unknown
+            return false
+        }
     }
     
     static var isSimulator: Bool {
