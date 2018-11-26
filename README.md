@@ -6,6 +6,8 @@ Works on both Android and iOS platforms, but **will not pass the Apple App Store
 
 Tested on iOS Simulator devices: iPhone 5, 6, 7, 8, SE, X, XR, XS, XS Max
 
+**NOTE**: Does not return any values for iPad at this time.
+
 ## Installation
 
 In your application project directory:
