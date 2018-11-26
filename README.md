@@ -76,6 +76,9 @@ This open-source project was made possible by some fine people over at [CNY Apps
 
 ## Changelog ##
 
+- v1.1.1
+  - Preventing iPad crash ([#4](https://github.com/emcniece/cordova-plugin-rssi/pull/4))
+
 - v1.1.0
   - Adding support for iPhone XR, XS, XS Max, iOS 12
 
