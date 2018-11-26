@@ -31,6 +31,7 @@ import Foundation
  * https://stackoverflow.com/a/47566231/943540
  *
  * modelIdentifier:
+ *   iPad Pro: 7,1
  *   iPhone SE: 8,4
  *   iPhone 8: 10,4, 10,5
  *   iPhone X: 10,3 10,6
@@ -51,7 +52,9 @@ extension UIDevice {
             modelIdentifier = String(cString: machine)
         }
 
-        let modelNumber = modelIdentifier.replacingOccurrences(of: "iPhone", with: "")
+        let modelNumber = modelIdentifier
+            .replacingOccurrences(of: "iPhone", with: "")
+            .replacingOccurrences(of: "iPad", with: "")
         let modelArray = modelNumber.components(separatedBy: ",")
         let modelMajor:Int! = Int(modelArray[0])
         let modelMinor:Int! = Int(modelArray[1])
