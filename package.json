@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-rssi",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Cordova plugin for reading WiFi RSSI",
   "main": "index.js",
   "scripts": {

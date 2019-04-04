@@ -76,6 +76,9 @@ This open-source project was made possible by some fine people over at [CNY Apps
 
 ## Changelog ##
 
+- v1.1.2
+  - Upgrade [cordova-plugin-add-swift-support](https://github.com/akofman/cordova-plugin-add-swift-support) to 2.0.1
+
 - v1.1.1
   - Preventing iPad crash ([#4](https://github.com/emcniece/cordova-plugin-rssi/pull/4))
 
