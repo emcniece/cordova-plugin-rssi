@@ -60,8 +60,8 @@ extension UIDevice {
         let modelMinor:Int! = Int(modelArray[1])
         
         #if DEBUG
-            print("modelIdentifier: \(modelIdentifier)")
-            print("modelArray: \(modelArray)")
+            print("cordova-plugin-rssi: modelIdentifier: \(modelIdentifier)")
+            print("cordova-plugin-rssi: modelArray: \(modelArray)")
         #endif
 
         if modelMajor < 10 {
@@ -103,7 +103,7 @@ extension UIDevice {
         }
         
         #if DEBUG
-            print("RSSI: rssi: \(rssi), bars: \(bars), isIPhoneX: \(isIPhoneX)")
+            print("cordova-plugin-rssi: rssi: \(rssi), bars: \(bars), isIPhoneX: \(isIPhoneX)")
         #endif
 
         let message: NSDictionary = NSDictionary(
@@ -135,7 +135,7 @@ extension UIDevice {
         }
         
         if let exception = exception {
-            print("getWiFiRSSI exception: \(exception)")
+            print("cordova-plugin-rssi: getWiFiRSSI exception: \(exception)")
         }
         
         return rssi
@@ -161,7 +161,7 @@ extension UIDevice {
         }
         
         if let exception = exception {
-            print("getNormalWifiBars exception: \(exception)")
+            print("cordova-plugin-rssi: getNormalWifiBars exception: \(exception)")
         }
         
         return bars
@@ -190,7 +190,7 @@ extension UIDevice {
         }
         
         if let exception = exception {
-            print("getXWifiBars exception: \(exception)")
+            print("cordova-plugin-rssi: getXWifiBars exception: \(exception)")
         }
         
         return bars
