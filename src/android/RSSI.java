@@ -77,7 +77,6 @@ public class RSSI extends CordovaPlugin {
 
                         status.put("rssi", rssi);
                         status.put("bars", level);
-                        status.put("isIPhoneX", false);
 
                         Log.d(TAG, "Sending result: " + status.toString());
 
