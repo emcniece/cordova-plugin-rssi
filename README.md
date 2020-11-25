@@ -36,7 +36,7 @@ rssi.read(function success(data){
 ```
 
 - `rssi`: WiFi Received Signal Strength Indicator
-  - Availability: Android, iOS but not iPhoneX
+  - Availability: Android, iOS 10-12
   - Value: Integer or `null` if unavailable
   - Range: `-100 ≤ x ≤ 0`
 - `bars`: Number of visible bars in WiFi icon
@@ -48,9 +48,6 @@ rssi.read(function success(data){
     - `2`: RSSI `-67` - `-77`
     - `1`: RSSI `-78` - `-88`
     - `0`: RSSI `-89-`
-- `isIPhoneX`: Flag for detecting whether iPhone X acquisition was used
-  - Availability: Android, iOS
-  - Value: Boolean
 
 
 ## Browser / Development Usage
@@ -75,6 +72,11 @@ This open-source project was made possible by some fine people over at [CNY Apps
 [The MIT License](./LICENSE)
 
 ## Changelog ##
+
+- v1.2.0
+  - iOS 13+ compatibility, `bars` detection refactor
+  - Deprecated `isIPhoneX` method
+  - Upgrade [cordova-plugin-add-swift-support](https://github.com/akofman/cordova-plugin-add-swift-support) to 2.0.2
 
 - v1.1.2
   - Upgrade [cordova-plugin-add-swift-support](https://github.com/akofman/cordova-plugin-add-swift-support) to 2.0.1
